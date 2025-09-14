@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 
 @Component({
-  selector: 'praetor-logout-confirm',
+  selector: 'ar-logout-confirm',
   standalone: true,
   imports: [CommonModule, ButtonModule, DialogModule],
   templateUrl: './logout-confirm.component.html',

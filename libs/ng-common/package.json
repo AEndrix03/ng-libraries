@@ -1,9 +1,20 @@
 {
   "name": "@aredegalli/ng-common",
   "version": "0.0.1",
+  "main": "bundles/ng-auth.umd.js",
+  "module": "fesm2022/ng-auth.mjs",
+  "typings": "index.d.ts",
   "peerDependencies": {
     "@angular/common": "^20.1.0",
     "@angular/core": "^20.1.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "http://verdaccio.aredegalli.it:4873/"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "package.json"
+  ]
 }

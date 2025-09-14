@@ -5,5 +5,13 @@
     "@angular/common": "^20.1.0",
     "@angular/core": "^20.1.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "http://verdaccio.aredegalli.it:4873/"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "package.json"
+  ]
 }

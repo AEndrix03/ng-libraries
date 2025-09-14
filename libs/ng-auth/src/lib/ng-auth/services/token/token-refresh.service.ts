@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { EMPTY, interval, Subscription } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
-import { AuthenticationService } from '@3-dp-fe/praetor-auth-kit';
 import { TokenStorageService } from './token-storage.service';
 import { AuthEventsService } from '../event/auth-event.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Injectable({ providedIn: 'root' })
 export class TokenRefreshService {

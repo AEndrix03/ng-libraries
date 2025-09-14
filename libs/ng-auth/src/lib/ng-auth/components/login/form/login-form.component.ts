@@ -19,7 +19,7 @@ import { ButtonModule } from 'primeng/button';
 import { LoginRequestDto } from '../../../models/login.models';
 
 @Component({
-  selector: 'praetor-login-form',
+  selector: 'ar-login-form',
   standalone: true,
   imports: [
     CommonModule,

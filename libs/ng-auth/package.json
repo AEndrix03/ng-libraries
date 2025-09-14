@@ -1,9 +1,16 @@
 {
   "name": "@aredegalli/ng-auth",
   "version": "0.0.1",
+  "description": "Authentication library for Angular",
+  "main": "bundles/ng-auth.umd.js",
+  "module": "fesm2022/ng-auth.mjs",
+  "typings": "index.d.ts",
   "peerDependencies": {
     "@angular/common": "^20.1.0",
     "@angular/core": "^20.1.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "http://verdaccio.aredegalli.it:4873/"
+  }
 }

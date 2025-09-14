@@ -1,19 +1,17 @@
 import { Component, Inject, signal, WritableSignal } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import {
-  AuthenticationService,
-  AuthEventsService,
-  LoginFormComponent,
-  LoginRequestDto,
-  PRAETOR_LOGIN_EFFECTS,
-} from '@3-dp-fe/praetor-auth-kit';
 import { Toast } from 'primeng/toast';
 import { ReactiveFormsModule } from '@angular/forms';
 import { catchError, filter, finalize } from 'rxjs/operators';
 import { of, tap } from 'rxjs';
+import { LoginRequestDto } from '../../models/login.models';
+import { AuthEventsService } from '../../services/event/auth-event.service';
+import { AuthenticationService } from '../../services/authentication.service';
+import { PRAETOR_LOGIN_EFFECTS } from '../../tokens/effects.token';
+import { LoginFormComponent } from './form/login-form.component';
 
 @Component({
-  selector: 'praetor-login',
+  selector: 'ar-login',
   imports: [Toast, ReactiveFormsModule, LoginFormComponent],
   templateUrl: './login.component.html',
   providers: [MessageService],
