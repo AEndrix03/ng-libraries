@@ -11,7 +11,7 @@ import { Button, ButtonSeverity } from 'primeng/button';
 import { ThemeModeService } from './theme-mode.service';
 
 @Component({
-  selector: 'printer-theme-mode-button',
+  selector: 'ar-theme-mode-button',
   imports: [Button],
   templateUrl: './theme-mode-button.component.html',
 })

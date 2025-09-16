@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'printer-float-line',
+  selector: 'ar-float-line',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './float-line.component.html',

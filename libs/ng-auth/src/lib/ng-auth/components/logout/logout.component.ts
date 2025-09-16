@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
@@ -10,6 +10,7 @@ import { AuthEventsService } from '../../services/event/auth-event.service';
   standalone: true,
   imports: [CommonModule, ButtonModule, LogoutConfirmComponent],
   templateUrl: './logout.component.html',
+  encapsulation: ViewEncapsulation.None,
 })
 export class LogoutComponent {
   constructor(

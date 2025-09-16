@@ -1,0 +1,67 @@
+/* Stili per il background decorativo */
+.background-decor-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #a78bfa, #f472b6, #6366f1);
+  border-radius: 1rem;
+  opacity: 0;
+  filter: blur(32px);
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.background-gradient.opacity-30 {
+  opacity: 0.3;
+}
+
+.decorative-icons {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+}
+
+.icon-1 {
+  top: 15%;
+  right: 10%;
+  width: 3.5rem;
+  height: 3.5rem;
+  animation: float-icon-1 6s ease-in-out infinite;
+}
+
+.icon-2 {
+  bottom: 25%;
+  left: 8%;
+  width: 3rem;
+  height: 3rem;
+  animation: float-icon-2 7s ease-in-out infinite;
+}
+
+.icon-3 {
+  top: 60%;
+  right: 15%;
+  width: 2.5rem;
+  height: 2.5rem;
+  animation: float-icon-3 8s ease-in-out infinite;
+}
+

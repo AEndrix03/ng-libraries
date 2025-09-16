@@ -4,7 +4,7 @@ import { FloatLineComponent } from '../float-line/float-line.component';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'printer-page-title',
+  selector: 'ar-page-title',
   standalone: true,
   imports: [CommonModule, FloatLineComponent, ButtonModule],
   templateUrl: './page-title.component.html',

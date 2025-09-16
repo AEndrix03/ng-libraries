@@ -1,6 +1,6 @@
 {
   "name": "@aredegalli/ng-auth",
-  "version": "0.0.1",
+  "version": "0.0.10",
   "description": "Authentication library for Angular",
   "main": "bundles/ng-auth.umd.js",
   "module": "fesm2022/ng-auth.mjs",

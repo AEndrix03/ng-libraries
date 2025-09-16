@@ -1,6 +1,15 @@
-<div class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-  <ar-login-form [loading]="loading()" (login)="doLogin($event)" (changePassword)="doChangePassword()" />
-  <p-toast />
-</div>
-
-
+<ar-login-form
+  [title]="config?.title"
+  [subtitle]="config?.subtitle"
+  [showRememberMe]="config?.showRememberMe"
+  [showForgotPassword]="config?.showForgotPassword"
+  [showCreateAccount]="config?.showCreateAccount"
+  [iconCard]="config?.iconCard"
+  [logoCard]="config?.logoCard"
+  [logoStyle]="config?.logoStyle"
+  [showAppleLogin]="config?.showAppleLogin"
+  [showGoogleLogin]="config?.showGoogleLogin"
+  [showGithubLogin]="config?.showGithubLogin"
+  (login)="doLogin($event)"
+  (forgotPassword)="doChangePassword()" />
+<p-toast position="top-right" class="modern-toast" />

@@ -1,0 +1,40 @@
+/* Animazioni per le icone fluttuanti */
+@keyframes float-icon-1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-icon-2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes float-icon-3 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.icon-1 {
+  animation-name: float-icon-1;
+}
+
+.icon-2 {
+  animation-name: float-icon-2;
+}
+
+.icon-3 {
+  animation-name: float-icon-3;
+}
+

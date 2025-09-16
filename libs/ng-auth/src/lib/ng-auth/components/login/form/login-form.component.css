@@ -1,0 +1,160 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient-xy {
+  0%, 100% {
+    background-position: left top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient-xy {
+  background-size: 200% 200%;
+  animation: gradient-xy 10s ease infinite;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* PrimeNG Component Overrides - Using Tailwind-style syntax */
+
+/* Input Text */
+:host ::ng-deep .p-inputtext {
+  @apply rounded-lg px-4 py-3 pl-10;
+  font-family: inherit;
+}
+
+/* Checkbox */
+:host ::ng-deep .p-checkbox .p-checkbox-box {
+  @apply rounded transition-all duration-200;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+  @apply shadow-lg shadow-purple-500/20;
+}
+
+/* Button */
+:host ::ng-deep .p-button {
+  @apply rounded-lg font-semibold transition-all duration-300;
+}
+
+:host ::ng-deep .p-button:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+/* Message Component */
+:host ::ng-deep .p-message {
+  @apply rounded-lg;
+}
+
+:host ::ng-deep .p-message .p-message-wrapper {
+  @apply px-4 py-3;
+}
+
+/* Focus States */
+:host ::ng-deep .p-inputtext:focus {
+  @apply outline-none;
+}
+
+/* Loading Spinner */
+:host ::ng-deep .p-button-loading-icon {
+  @apply animate-spin;
+}
+
+/* Ripple Effect */
+:host ::ng-deep .p-ripple {
+  @apply relative overflow-hidden;
+}
+
+:host ::ng-deep .p-ink {
+  @apply absolute block rounded-full pointer-events-none;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple 0.4s linear;
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  :host ::ng-deep .p-inputtext {
+    @apply text-sm;
+  }
+
+  :host ::ng-deep .p-button {
+    @apply text-sm;
+  }
+}
+
+/* Dark mode support (already built into the design) */
+@media (prefers-color-scheme: dark) {
+  /* Component is already optimized for dark mode */
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .min-h-screen {
+    min-height: auto;
+    background: white !important;
+  }
+
+  /* Hide decorative elements */
+  .absolute {
+    display: none !important;
+  }
+}

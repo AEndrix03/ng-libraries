@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
 
 @Component({
-  selector: 'printer-carousel',
+  selector: 'ar-carousel',
   standalone: true,
   imports: [CommonModule, CarouselModule],
   templateUrl: './carousel.component.html',
